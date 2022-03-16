@@ -16,7 +16,7 @@ jobs:
       - name: vet	
         run: |
           mkdir tmp
-          kubectl kustomize . > tmp/manifests.yaml
+          kubectl kustomize staging > tmp/manifests.yaml
       - name: vet	
         run: |
           nomos vet --path tmp/ --no-api-server-check --source-format unstructured
