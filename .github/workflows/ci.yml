@@ -13,7 +13,7 @@ jobs:
       - name: install kpt and nomos	
         run: |
           gcloud components install kpt nomos --quiet
-      - name: vet	
+      - name: kustomize	
         run: |
           mkdir tmp
           kubectl kustomize staging > tmp/manifests.yaml
